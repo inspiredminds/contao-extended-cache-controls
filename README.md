@@ -9,7 +9,7 @@ the HTTP cache size smaller by only caching the most relevant URLs (e.g. only ca
 parameters or only certain parameters etc.).
 
 * __Do not cache non-canonicals__: Prevents caching if canonical URLs are enabled for this page and the current URL does
-not match the canonincal URL.
+not match the canonical URL.
 * __Do not cache query parameters__: Prevents caching if query parameters are present in the URL. 
 * __Allowed query parameters__: Allows you to define allowed query parameters for the previous setting. If the URL 
 contains a query parameter not present in this comma-separated list, it will not be cached.
