@@ -38,8 +38,12 @@ class MakeResponsePrivateListener
      * Stores the canonical URL.
      */
     #[AsHook('generatePage', priority: -1000)]
-    public function onGeneratePage(): void
+    public function onGeneratePage(PageModel $page): void
     {
+        if (!$page->enableCanonical) {
+            return;
+        }
+
         if (!$request = $this->requestStack->getMainRequest()) {
             return;
         }
