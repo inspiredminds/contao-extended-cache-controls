@@ -82,7 +82,7 @@ class MakeResponsePrivateListener
 
         $request = $event->getRequest();
 
-        // Nothing to be done if no PageModel cannot be retrieved or cache is disabled
+        // Nothing to be done if PageModel cannot be retrieved or cache is disabled
         if (!($page = $this->getPageModel($request)) || !$page->cache) {
             return;
         }
