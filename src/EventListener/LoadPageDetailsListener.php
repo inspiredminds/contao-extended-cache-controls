@@ -18,6 +18,10 @@ class LoadPageDetailsListener
 {
     public function __invoke(array $parentModels, PageModel $page): void
     {
+        if ($page->includeCache) {
+            return;
+        }
+
         /** @var PageModel $parent */
         foreach ($parentModels as $parent) {
             if ($parent->includeCache) {
